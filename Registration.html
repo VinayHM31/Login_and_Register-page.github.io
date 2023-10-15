@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="Registration.css">
-</head>
-<body>
-   <div class="container">
-        <div class="title">Registration</div>
-        <form  method="post">
-            <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Username</span>
-                    <input type="text" id="username" name="username" placeholder="Enter Your Name" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Email</span>
-                    <input type="email" id="email" name="email"  placeholder="Enter Your Email" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input type="number" id="phonenumber" name="phonenumber" placeholder="Enter Your Number" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Password</span>
-                    <input type="password" id="password" name="password"  placeholder="Enter Your password" required>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration</header>
+      <form method="post" action= >
+        <div class="field username-field">
+            <div class="input-field">
+                <input type="text" placeholder="Enter your firstname" class="username" />
             </div>
-            <div>
-                </br>
-                <button type="submit" class="button" id="submit">Register</button>
-            </div>
-            <div class="ancher">Already have an Account? <a href="index.html">Login</a>
-            </div>
-        </form>
+            <span class="error username-error">
+                <p class="error-text">Please enter valid username</p>
+            </span>
+        </div>
+
+        <div class="field lastname-field">
+          <div class="input-field">
+              <input type="text" placeholder="Enter your Lastname" class="lastname" />
+          </div>
+          <span class="error lastname-error">
+              <p class="error-text">Please enter valid lastname</p>
+          </span>
+      </div>
+
+        <div class="field email-field">
+          <div class="input-field">
+            <input type="email" placeholder="Enter your email" class="email" />
+          </div>
+          <span class="error email-error">
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+
+        <div class="field phonenumber-field">
+          <div class="input-field">
+            <input type="number" placeholder="Enter your phone number" class="phonenumber"/>
+          </div>
+          <span class="error phonenumber-error">
+            <p class="error-text">Please enter numbers only</p>
+          </span>
+        </div>
+
+        <div class="field create-password">
+          <div class="input-field">
+            <input type="password" placeholder="Create password" class="password"/>
+          </div>
+          <span class="error password-error">
+            <p class="error-text">Please enter atleast 8 charatcer with number, symbol, small and capital letter.</p>
+          </span>
+        </div>
+
+        <div class="field confirm-password">
+          <div class="input-field">
+            <input type="password" placeholder="Confirm password" class="cPassword" />
+          </div>
+          <span class="error cPassword-error">
+            <p class="error-text">Password don't match</p>
+          </span>
+        </div>
+
+        <div class="input-field button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+
+      <div class="login">Already have an Account? <a href="login.html">Login</a></div>
     </div>
-</body>
+   <script src="script.js"></script>
+  </body>
 </html>
